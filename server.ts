@@ -1,6 +1,5 @@
 import server from "./app";
-import { PORT } from "./constants/server.constants";
-
+const PORT = process.env.PORT || 5000;
 server.listen({ port: PORT }, (): void =>
   console.log(
     `\n🚀      GraphQL is now running on http://localhost:${PORT}/graphql`
